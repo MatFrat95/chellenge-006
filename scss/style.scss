@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	// colors
+	--darkBlue: hsl(234, 12%, 34%);
+	--grayishBlue: hsl(229, 6%, 66%);
+	--lightGray: hsl(0, 0%, 98%);
+	--white: hsl(0, 0%, 100%);
+
+	--red: hsl(0, 78%, 62%);
+	--cyan: hsl(180, 62%, 55%);
+	--orange: hsl(34, 97%, 64%);
+	--blue: hsl(212, 86%, 64%);
+	// font styles
+	--poppins: 'Poppins', serif;
+	// font sizes
+	--text-font-size: clamp(1rem, 1.5vw, 1.25rem);
+
+	--color-border: 0.25rem solid;
+}
+// basic settings classes
+
+body {
+	background-color: var(--lightGray);
+	font-family: var(--poppins);
+	color: var(--grayishBlue);
+}
+h1,
+h2 {
+	color: var(--darkBlue);
+}
+h2 {
+	font-weight: 600;
+}
+.container {
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.main {
+	margin: 5rem auto;
+}
+
+// header
+
+.main__header {
+	font-size: clamp(1.5rem, 5vw, 2.5rem);
+	text-align: center;
+
+	.header__thin {
+		font-weight: 300;
+		color: var(--grayishBlue);
+	}
+}
+.main__text {
+	font-size: var(--text-font-size);
+	text-align: center;
+	margin: 1.5rem 0 5rem;
+}
+
+// card items
+
+.card__item {
+	display: flex;
+	flex-direction: column;
+	padding: 1.5rem;
+	margin: 1.5rem auto;
+	max-width: 375px;
+
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: 0 0.25rem 1rem;
+}
+
+// border card top colors
+.border-cyan {
+	border-top: var(--color-border) var(--cyan);
+}
+.border-red {
+	border-top: var(--color-border) var(--red);
+}
+.border-orange {
+	border-top: var(--color-border) var(--orange);
+}
+.border-blue {
+	border-top: var(--color-border) var(--blue);
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+}
+.card__img-box {
+	margin-top: 3rem;
+	margin-left: auto;
+}
+
+@media (min-width: 550px) {
+	.border-red,
+	.border-blue {
+		margin-left: 0;
+	}
+	.border-cyan,
+	.border-orange {
+		margin-right: 0;
+	}
+}
+
+
+
+@media (min-width: 900px) {
+	.main__header {
+		width: min(600px, 50vw);
+		margin: 0 auto;
+	}
+	.card__item-box {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+	.card__item-box-left,
+	.card__item-box-right {
+		align-content: center;
+	}
+	.border-cyan {
+		grid-column: 1/2;
+	}
+	.border-red,
+	.border-orange {
+		grid-column: 2/3;
+	}
+	.border-blue {
+		grid-column: 3/4;
+	}
+	.card__item-box-mid {
+		margin: 0 auto;
+		max-width: 600px;
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}

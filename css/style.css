@@ -41,12 +41,14 @@ h2 {
 }
 
 .main {
-  margin: 5rem auto;
+  margin: 6rem auto;
 }
 
 .main__header {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
   text-align: center;
+  font-weight: 600;
+  line-height: 1.25;
 }
 .main__header .header__thin {
   font-weight: 300;
@@ -54,9 +56,10 @@ h2 {
 }
 
 .main__text {
+  margin: 1rem auto 3rem;
+  width: min(600px, 55vw);
   font-size: var(--text-font-size);
   text-align: center;
-  margin: 1.5rem 0 5rem;
 }
 
 .card__item {
@@ -67,7 +70,7 @@ h2 {
   max-width: 375px;
   border-radius: 10px;
   background-color: white;
-  box-shadow: 0 0.25rem 1rem;
+  box-shadow: 0 0.25rem 0.5rem;
 }
 
 .border-cyan {
@@ -108,7 +111,7 @@ h2 {
 }
 @media (min-width: 900px) {
   .main__header {
-    width: min(600px, 50vw);
+    width: min(500px, 45vw);
     margin: 0 auto;
   }
   .card__item-box {

@@ -19,7 +19,7 @@
 	// font styles
 	--poppins: 'Poppins', serif;
 	// font sizes
-	--text-font-size: clamp(1rem, 1.5vw, 1.25rem);
+	--text-font-size: clamp(1rem, 1.25vw, 1.15rem);
 
 	--color-border: 0.25rem solid;
 }
@@ -43,7 +43,7 @@ h2 {
 }
 
 .main {
-	margin: 6rem auto;
+	margin: 7rem auto;
 }
 
 // header
@@ -61,7 +61,7 @@ h2 {
 }
 .main__text {
 	margin: 1rem auto 3rem;
-	width: min(600px, 55vw);
+	width: min(660px, 65vw);
 	font-size: var(--text-font-size);
 	text-align: center;
 }
